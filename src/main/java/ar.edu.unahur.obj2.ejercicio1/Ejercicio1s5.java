@@ -5,8 +5,9 @@ public class Ejercicio1s5 {
         String texto = "By using this site you are agreeing to the use of cookies and related technologies " +
                 "to personalize and enhance your experience of using eveonline.com, allowing us to serve you c" +
                 "ontent and marketing that best suit your preferences through the data we collect.";
-        char letraBuscada = '.';
-        System.out.println("El caracter " + letraBuscada + " se encuentra " + contarLetra(letraBuscada, texto)+" veces");
+        String texto2 = "aaacaaac";
+        char letraBuscada = 'c';
+        System.out.println("El caracter " + letraBuscada + " se encuentra " + contarLetra(letraBuscada, texto2)+" veces");
     }
     private static int contarLetra (char letra, String txt){
         if (txt.length() == 1){
