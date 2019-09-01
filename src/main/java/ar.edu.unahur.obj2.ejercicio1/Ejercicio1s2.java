@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.ejercicio1;
 
-public class Ejercicio2 {
+public class Ejercicio1s2 {
     int[] los20 = {6,64,27,45,7,8,9,54,4,3,56,16,27,788,99,0,7655,62,854};
     int ingreso = 30;
     public int[] ObtenerMayor (int[] arrr){
