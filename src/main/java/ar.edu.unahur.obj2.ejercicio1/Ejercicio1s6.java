@@ -1,5 +1,4 @@
 package ar.edu.unahur.obj2.ejercicio1;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio1s6 {
