@@ -1,27 +1,43 @@
 package ar.edu.unahur.obj2.ejercicio1.Ejercicio2;
 
+import java.util.Objects;
+
 public class Administrativo extends Empleado {
-    private double hsExtra ;
-    private double hsMes;
-    //@Override
-   public Administrativo (double hsExtra, double hsMes) {
-       // super;
-        /*this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.email = email;
-        this.sueldoBase = sueldoBase;*/
-        this.hsExtra = hsExtra;
-        this.hsMes = hsMes;
+
+    private int horasExtras;
+    private int horasMes;
+
+    public Administrativo(String dni, String nombre, String apellido, String email, float sueldoBase, String legajo, int horasExtras, int horasMes) {
+        super(dni, nombre, apellido, email, sueldoBase, legajo);
+        this.horasExtras = horasExtras;
+        this.horasMes = horasMes;
     }
 
-   /*public Administrativo(double hsExtra, double hsMes) {
-        this.hsExtra = hsExtra;
-        this.hsMes = hsMes;
-    }*/
+    public int getHorasExtras() {
+        return horasExtras;
+    }
+
+    public int getHorasMes() {
+        return horasMes;
+    }
 
     @Override
-    public void setSueldoBase(double sueldoBase) {
-        super.setSueldoBase(sueldoBase);
+    public float getSueldo() {
+        return getSueldoBase() * (horasExtras*1.5f + horasMes)/horasMes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Administrativo that = (Administrativo) o;
+        return horasExtras == that.horasExtras &&
+                horasMes == that.horasMes;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), horasExtras, horasMes);
     }
 }
